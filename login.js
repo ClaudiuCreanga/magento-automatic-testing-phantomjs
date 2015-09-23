@@ -1,7 +1,5 @@
 exports.go_to_login = function(){
-	casper.thenClick('ul.links > li:nth-child(3) > a:nth-child(1)',function() {
-		this.test.pass('login page was loaded');
-
-		
+	casper.thenClick('.test-account',function() {
+		this.test.pass('login page was loaded');		
 	});
 }

@@ -2,7 +2,7 @@ exports.go_to_register = function(email){
 		
 	//Go to register page
 	casper.then(function() {
-	    this.click('.second-block button.small:nth-child(1)');
+	    this.click('.test-create-account');
 		this.test.pass('register page was loaded');
 		screenshots("register")
 	});
