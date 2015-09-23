@@ -36,20 +36,25 @@ var cart = require("cart");
 var checkout = require("checkout");
 var success = require("success");
 
+var taking_screenshots = function(page){
+	if(get_screenshots){
+		if(responsive){
+			screenshots.responsive_screenshots(page);
+		}
+		else{
+			screenshots.fixed_width_screenshots(page);
+		}
+	}
+}
+
 casper.start().thenOpen(BASE_URL, function() {
 	
 	casper.test.comment('\nSTART TEST.' );
 	
-	if(BASE_URL == this.getCurrentUrl()){
-	    this.test.pass(this.getCurrentUrl()+' was loaded');
-	}
-	else{
-	    this.test.fail(this.getCurrentUrl()+' was not loaded');
-	}    
     home.go_to_homepage();
     login.go_to_login();
-    //register.go_to_register("me"); //options randon or me for email
-    //account.go_to_account();
+    register.go_to_register("me"); //options randon or me for email
+    account.go_to_account();
     log_me.log_me_in(personal_email,my_password);
 	category.go_to_category();
 	category_add_product.add_product();

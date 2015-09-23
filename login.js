@@ -1,5 +1,6 @@
 exports.go_to_login = function(){
 	casper.thenClick('.test-account',function() {
-		this.test.pass('login page was loaded');		
+		this.test.pass('login page was loaded');
+		taking_screenshots("login-page");
 	});
 }
