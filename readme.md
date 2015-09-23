@@ -6,7 +6,7 @@ Navigate headlessly through your e-commerce website to test and functionality an
 
 - Phantomjs (version 2 better)
 - CasperJs
-- Optional: slimmerjs
+- Optional: slimmerjs (for gecko)
 
 ## Install
 
@@ -28,11 +28,11 @@ casperjs test index.js --url="example.com"
 
 ## API
 
-`BASE_URL` takes the url option from command line
-`personal_email` for account login and submitting orders to receive test emails
-`viewportSizes` take screenshots at different widths, by default phantomjs opens the browser in mobile view
-`get_screenshots` set it to false to not take screenshots and be faster
-`responsive` set it to false for fixed width websites
+#`BASE_URL` takes the url option from command line
+#`personal_email` for account login and submitting orders to receive test emails
+#`viewportSizes` take screenshots at different widths, by default phantomjs opens the browser in mobile view
+#`get_screenshots` set it to false to not take screenshots and be faster
+#`responsive` set it to false for fixed width websites
 
 ## License
 
